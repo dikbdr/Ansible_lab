@@ -1,0 +1,13 @@
+---
+
+- name: Installing Packages (nginx, postgresql) via Ansible
+  hosts: all
+  tasks:
+    - name: Installing Packages
+      yum:
+        name:
+          - nginx
+          - postgresql
+        state: present
+
+...
