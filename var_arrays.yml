@@ -1,0 +1,17 @@
+---
+- hosts: all
+  user: root
+
+  vars:
+    students:
+      - Mark
+      - Melisa
+      - Arthur
+      - Kevin
+
+  tasks:
+  - name: Ansible List variable Example
+    debug:
+      msg: "{{ students [3] }}"
+
+...

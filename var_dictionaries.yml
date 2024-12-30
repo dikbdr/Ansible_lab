@@ -1,0 +1,25 @@
+---
+- hosts: all
+  user: root
+
+  vars:
+    students:
+      - Mark:
+         city: Lisbon
+         address: 122-33-33
+      - Melisa:
+         city: Porto
+         address: 22-22-22
+      - Arthur:
+         city: Faro
+         address: 99-99-99
+      - Kevin:
+         city: ktm
+         address: 334-455
+
+  tasks:
+  - name: Ansible Dictionaries variable Example
+    debug:
+      msg: "{{ students }}"
+
+...

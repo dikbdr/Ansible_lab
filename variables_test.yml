@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars:
+    msg1: Hello Everyone! from Ansible Variable test
+  
+  tasks:
+    - name: Ansible Basic Variable usages
+      debug:
+        msg: "{{ msg1 }}"
+
+...

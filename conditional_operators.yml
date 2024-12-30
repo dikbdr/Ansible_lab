@@ -1,0 +1,11 @@
+---
+- name: Starting and Stopiing Service using conditional operator
+  hosts: all
+  tasks:
+    - service: name=httpd state=started
+      when: ansible_host=='Host2'
+
+    - service: name=chronyd state=stopped
+      when: ansible_host=='Host1'
+
+...

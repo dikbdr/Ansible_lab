@@ -1,0 +1,10 @@
+---
+- name: Configureing Apache Web Server
+  hosts: test
+
+  tasks:
+   - name: Install Apache Package
+     yum:
+        name: httpd
+        state: present
+
