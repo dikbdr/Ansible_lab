@@ -10,7 +10,7 @@
 
 # Ex 1: Ungrouped hosts, specify before any group headers:
 
-localhost
+localhost ansible_ssh_privatte_key_file=/root/.ssh/id_rsa
 ## green.example.com
 ## blue.example.com
 ## 192.168.100.1
@@ -18,11 +18,13 @@ localhost
 
 # Ex 2: A collection of hosts belonging to the 'webservers' group:
 
-[webservers]
+[web]
 ## alpha.example.org
 ## beta.example.org
- 192.168.0.119
- 192.168.0.120
+# 192.168.0.110
+ 192.168.0.110  ansible_ssh_private_key_file=/root/.ssh/id_rsa
+#172.20.38.89
+#192.168.0.109
 
 # If you have multiple hosts following a pattern, you can specify
 # them like this:
@@ -46,7 +48,7 @@ localhost
 # Ex4: Multiple hosts arranged into groups such as 'Debian' and 'openSUSE':
 
  [Debian]
-192.168.0.111
+#192.168.0.111 ansible_ssh_private_key_file=/root/.ssh/id_rsa
 ## alpha.example.org
 ## beta.example.org
 
